@@ -1,8 +1,13 @@
 body {
   padding: 2rem;
   height: 100vh;
-  // background-image: url('https://images-na.ssl-images-amazon.com/images/I/41a6sJrj7SL.jpg');
-  background-color: whitesmoke;
+  // background-image: url('https://images-na.ssl-images-amazon.com/images/I/41a6sJrj7SL.jpg') ;
   font-family: $font-main;
+
   
+}
+
+
+.shows-listfav{
+  visibility: hidden;
 }
