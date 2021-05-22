@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>EValuacion final</title>
+  <title>search your shows</title>
   <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="./assets/css/main.css" />
   <link rel="icon" href="./assets/images/computer-cat.jpg" />
@@ -13,30 +13,31 @@
 <body>
   <div class="page">
     <header class="page__header">
+        
      <hi>¡¡¡¡Bienvenid@ a tu buscador de series favorito!!!</hi>
-
 
      
     </header>
 
     <main class="page__main">
       <h2>Buscador de series</h2>
-    <form  action="#">
-    <input type="text" class="UserSearch js-user-search"  placeholder="Escribe tu serie y click" >
-    <input type="button" class= "button   js-button" value="SEARCH">
+      <form action="#">
+        <input type="text" class="UserSearch js-user-search" placeholder="Escribe tu serie y click" >
+        <input type="button" class="button   js-button" value="SEARCH"  id="buttonUser">
+      </form>
+    <p class= "result  js-result">    </p>
+      <!-- esto tiene q aparecer y desaparecer //HIDDEN -->
+      <section class="shows__list  js-shows-list">
+        <ul class="shows-listfav  js-shows-listFav"> Favoritos
+          <li>
+            ---deberia estar hidden
+          </li>
+          <li>
+            ---
+          </li>
+        </ul>
+      </section>
 
-    </form>
-      
-    <!-- esto tiene q aparecer y desaparecer -->
-    <ul> Favoritos
-    <li>
-      ---
-    </li>
-    <li>
-      ---
-    </li>
-    </ul>
-     
     </main>
     <footer class="page__footer">
 
@@ -47,11 +48,11 @@
       <small>
         &copy; MarinaBsanz -->
 
-        
-        <!-- <a class="link__adalab" href="https://www.linkedin.com/in/marina-ben%C3%ADtez-s%C3%A1nchez-0214a059/">Marina Benítez Sánchez</a>
- -->
+    <!--     
+     <a class="link__adalab" href="https://www.linkedin.com/in/marina-ben%C3%ADtez-s%C3%A1nchez-0214a059/">Marina Benítez Sánchez</a>
+
       </small>
-    </footer>
+    </footer> --> 
 
   </div>
   <script src="./assets/js/main.js"></script>
