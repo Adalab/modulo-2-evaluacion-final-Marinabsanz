@@ -22,14 +22,13 @@ function searchShows() {
 if (cucumber.length === 0 ) {
     result.innerHTML += "no hay resultados en tu búsqueda"
     
-} else { result.innerHTML += "estos son tus resultados" }
-
+} else { result.innerHTML += "Estos son tus resultados al buscar " }
 
       for (const userShow of cucumber) {
-        
-       
-       result.innerHTML += "tu serie es "+ userShow.show.name+ ":"  +"<br>"
-       result.innerHTML += userShow.show.image.original
+         const yourShow= document.createElement ('li');
+          
+       result.innerHTML += userShow.show.name+":"  +"<br>" 
+      //  result.innerHTML += userShow.show.image.original
 
 
        ///TENGO QUE PINTAR LA IMAGEN y meter una de relleno si no hay
