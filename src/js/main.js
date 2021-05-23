@@ -19,9 +19,7 @@ function searchShows() {
 
     //CUCUMBER --DATA a TODO el json que veo en postman
     .then((cucumber) => {
-      //añadir mas parametros para trastear
-
-      //>pintar y linkear
+     
       if (cucumber.length === 0) {
         result.innerHTML += "no hay resultados en tu búsqueda";
       } else if (cucumber.length <= 2) {
@@ -29,18 +27,31 @@ function searchShows() {
       } else {
         result.innerHTML += "Estos son tus resultados al buscar ";
       }
-
+//no quiero que me autocomplete
+//necesito refrescar al darle al boton, ADD Y REMOVE
       for (const userShow of cucumber) {
         const liShow = document.createElement("li");
         result.innerHTML += userShow.show.name + ":" + "<br>";
         result.innerHTML += `<img src="${userShow.show.image.medium}"/>`;
-
-        //SALE LA ruta  PERO NO LA IMAGEN-->investigar
+        const imgResult = `<img src="${userShow.show.image.medium}"/>`;
+  
+       
+     
+        // DE ESTA FORMA ME SALEN REPES LA IMAG y el null no funciona cn if else
+        // if (cucumber === null) {
+        //   result.innerHTML += "no hay fotos";
+        // for (const imgResult of cucumber) {
+        //   let i= 0
+        //  
+        //   } else {
+        //     result.innerHTML += i+ `<img src="${userShow.show.image.medium}"/>`;
+        //   }
+          
+        // }
       }
     });
 }
 
 button.addEventListener("click", searchShows);
 
-///TENGO QUE PINTAR LA IMAGEN y meter una de relleno si no hay
 //limpiar antes de volver a pintar y hoja de reset
