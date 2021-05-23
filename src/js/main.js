@@ -4,7 +4,7 @@ const urlShow = "https://api.tvmaze.com/search/shows?q=";
 const userText = document.querySelector(".js-user-search");
 const button = document.querySelector(".js-button");
 const result = document.querySelector(".js-result");
-
+const imagesResult= document.querySelector (".js-series");
 ////NO ME VAn
 const image = document.querySelector("js-image");
 const urlImageFill = "https://placekitten.com/200/300";
@@ -27,16 +27,15 @@ function searchShows() {
       } else {
         result.innerHTML += "Estos son tus resultados al buscar ";
       }
+      
 //no quiero que me autocomplete
 //necesito refrescar al darle al boton, ADD Y REMOVE
       for (const userShow of cucumber) {
         const liShow = document.createElement("li");
         result.innerHTML += userShow.show.name + ":" + "<br>";
         result.innerHTML += `<img src="${userShow.show.image.medium}"/>`;
-        const imgResult = `<img src="${userShow.show.image.medium}"/>`;
-  
-       
-     
+        
+        
         // DE ESTA FORMA ME SALEN REPES LA IMAG y el null no funciona cn if else
         // if (cucumber === null) {
         //   result.innerHTML += "no hay fotos";
