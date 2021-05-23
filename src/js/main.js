@@ -9,8 +9,7 @@ const button = document.querySelector(".js-button");
 const result = document.querySelector(".js-result");
 const imagesResult = document.querySelector(".js-series");
 ////NO ME VAn
-const image = document.querySelector("js-image");
-const urlImageFill = "https://placekitten.com/200/300";
+
 //VARIABLES VACIAS
 // let cucumber = [];
 // let favoritos = [];
@@ -26,9 +25,10 @@ function searchShows() {
         result.innerHTML += "no hay resultados en tu búsqueda";
       } else if (cucumber.length <= 2) {
         result.innerHTML = "Introduce una letrita más";
-     
+    
       }
-       else {result.innerHTML += "Estos son tus resultados al buscar : ";
+       else {
+         result.innerHTML += "Estos son tus resultados al buscar :";
 
        }
       //no quiero que me autocomplete
@@ -40,12 +40,12 @@ function searchShows() {
 
       const imagesRslt= userShow.show.image;
       if (imagesRslt  === null) {
-        result.innerHTML= `<img src= "https://via.placeholder.com/210x295/ffffff/666666/?text=TV "></img>`
+        result.innerHTML= `<img src= "https://placekitten.com/200/300"></img>`
       } else {
        result.innerHTML +=  `<img src="${userShow.show.image.medium}"/>`; 
        
        
-      //  `<img src="$ {imagesRslt.medium} "/>`
+      //  `<img src="$ {imagesRslt.medium} "/>`   por q no me funciona asi si le he dado una constante?
       }
     
       
@@ -55,9 +55,6 @@ function searchShows() {
 }
 
 button.addEventListener("click", searchShows);
-function del() {
-  button.addEventListener("DataTransfer", delente);
-}
 
 // REFRESCAR BUSQUEDA- como hacer, sin click, q otra opcion?
 // asi me desaparece al instante- me vale para favoritos 
