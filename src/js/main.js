@@ -25,31 +25,24 @@ function searchShows() {
         result.innerHTML += "no hay resultados en tu búsqueda";
       } else if (cucumber.length <= 2) {
         result.innerHTML = "Introduce una letrita más";
-    
+      } else {
+        result.innerHTML += "Estos son tus resultados al buscar :";
       }
-       else {
-         result.innerHTML += "Estos son tus resultados al buscar :";
-
-       }
       //no quiero que me autocomplete
       //necesito refrescar al darle al boton, ADD Y REMOVE
       for (const userShow of cucumber) {
         const liShow = document.createElement("li");
 
-      result.innerHTML += userShow.show.name + ":" + "</br>";
+        result.innerHTML += userShow.show.name + ":" + "</br>";
 
-      const imagesRslt= userShow.show.image;
-      if (imagesRslt  === null) {
-        result.innerHTML= `<img src= "https://placekitten.com/200/300"></img>`
-      } else {
-       result.innerHTML +=  `<img src="${userShow.show.image.medium}"/>`; 
-       
-       
-      //  `<img src="$ {imagesRslt.medium} "/>`   por q no me funciona asi si le he dado una constante?
-      }
-    
-      
-   
+        const imagesRslt = userShow.show.image;
+        if (imagesRslt === null) {
+          result.innerHTML = `<img src= "https://placekitten.com/200/300"></img>"`;
+        } else {
+          result.innerHTML += `<img src="${userShow.show.image.medium}"/>`;
+
+          //  `<img src="$ {imagesRslt.medium} "/>`   por q no me funciona asi si le he dado una constante?
+        }
       }
     });
 }
@@ -57,7 +50,7 @@ function searchShows() {
 button.addEventListener("click", searchShows);
 
 // REFRESCAR BUSQUEDA- como hacer, sin click, q otra opcion?
-// asi me desaparece al instante- me vale para favoritos 
+// asi me desaparece al instante- me vale para favoritos
 // const reloadButton = document.getElementById("#reload");
 // function reload() {
 //   location.reload();
@@ -67,18 +60,14 @@ button.addEventListener("click", searchShows);
 
 //limpiar antes de volver a pintar y hoja de reset
 
+// DE ESTA FORMA ME SALEN REPES LA IMAG y el null no funciona cn if else
+// if (cucumber === null) {
+//   result.innerHTML += "no hay fotos";
+// for (const imgResult of cucumber) {
+//   let i= 0
+//
+//   } else {
+//     result.innerHTML += i+ `<img src="${userShow.show.image.medium}"/>`;
+//   }
 
-
-
-
- // DE ESTA FORMA ME SALEN REPES LA IMAG y el null no funciona cn if else
-        // if (cucumber === null) {
-        //   result.innerHTML += "no hay fotos";
-        // for (const imgResult of cucumber) {
-        //   let i= 0
-        //
-        //   } else {
-        //     result.innerHTML += i+ `<img src="${userShow.show.image.medium}"/>`;
-        //   }
-
-        // }
+// }
