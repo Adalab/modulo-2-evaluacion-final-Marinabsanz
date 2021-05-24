@@ -8,8 +8,8 @@ const userText = document.querySelector(".js-user-search");
 const button = document.querySelector(".js-button");
 const result = document.querySelector(".js-result");
 const imagesResult = document.querySelector(".js-series");
-////NO ME VAn
-
+////¡probando en poner aqui var d resultados con  texto para despues concatenar
+const resultText2 = "Estos son tus resultados al buscar :"
 //VARIABLES VACIAS
 // let cucumber = [];
 // let favoritos = [];
@@ -26,7 +26,8 @@ function searchShows() {
       } else if (cucumber.length <= 2) {
         result.innerHTML = "Introduce una letrita más";
       } else {
-        result.innerHTML += "Estos son tus resultados al buscar :";
+        
+        result.innerHTML += resultText2;
       }
       //no quiero que me autocomplete
       //necesito refrescar al darle al boton, ADD Y REMOVE
@@ -37,7 +38,7 @@ function searchShows() {
 
         const imagesRslt = userShow.show.image;
         if (imagesRslt === null) {
-          result.innerHTML = `<img src= "https://placekitten.com/200/300"></img>"`;
+          result.innerHTML = resultText2+`<img src= "https://placekitten.com/200/300"></img>"`;
         } else {
           result.innerHTML += `<img src="${userShow.show.image.medium}"/>`;
 
