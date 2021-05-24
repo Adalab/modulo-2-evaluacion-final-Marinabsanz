@@ -39,8 +39,7 @@ function searchShows() {
         htmlDeUnaSerie += userShow.show.name + ":" + "</br>";
         const imagesRslt = userShow.show.image;
         if (imagesRslt === null) {
-          htmlDeUnaSerie =
-            resultText2 + `<img src= "https://placekitten.com/200/300"></img>"`;
+          htmlDeUnaSerie = `<img src= "https://placekitten.com/200/300"></img>"`;
         } else {
           htmlDeUnaSerie += `<img src="${userShow.show.image.medium}"/>`;
           //var
@@ -57,25 +56,10 @@ function searchShows() {
 
 button.addEventListener("click", searchShows);
 
-// REFRESCAR BUSQUEDA- como hacer, sin click, q otra opcion?
-// asi me desaparece al instante- me vale para favoritos
+//botom para reset, dar id a nuevo boton que haga de refrescar--
 // const reloadButton = document.getElementById("#reload");
 // function reload() {
 //   location.reload();
 
 // }
 // reloadButton.addEventListener("click", reload, false);
-
-//limpiar antes de volver a pintar y hoja de reset
-
-// DE ESTA FORMA ME SALEN REPES LA IMAG y el null no funciona cn if else
-// if (cucumber === null) {
-//   result.innerHTML += "no hay fotos";
-// for (const imgResult of cucumber) {
-//   let i= 0
-//
-//   } else {
-//     result.innerHTML += i+ `<img src="${userShow.show.image.medium}"/>`;
-//   }
-
-// }
