@@ -1,58 +1,40 @@
 //FAVORITAS
 
-
-
-//obtener info d la img seleccionada
-
-//y dsp guardarlo en array d fav
-//click marca- click desmarca el fav
+// const carrito = document.querySelector(".js-shows-listFav");
 
 
 
 
+// function clickshow (event){ 
+//  const favSelect = event.currentTarget;
 
-
-
+// }
+ //obtener info asociada a los show
 
 
 
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-//PRIMERAS PRUEBAS-no va
-// let favorites = [];
-// favorites = document.getElementsByClassName("js-shows-listFav");
-
-// function selectFav(event) {
-//   const fav = event.target;
-//   const fav2 = event.currentTarget;
-//   fav2.classListt.toogle("favorite");
+// function addShows (evt){
+//     carrito.push(evt.target.getAttribute ('mark'))
 // }
 
 
-//tengo q poner la clase fav
+
+
+
+
+
+
+
+
+
+//obtener info d la img seleccionada
+//y dsp guardarlo en array d fav
+//click marca- click desmarca el fav
+//.push añadir elem al array  y dsp remove o splice con nº posicion
+// tb pueds coger el array completo y .filter//tengo q poner la clase fav
 //  en el metodo que pinta todas las tarjetas
 //para hacer eso necesito almacenar los fav
 //donde?en un array aparte

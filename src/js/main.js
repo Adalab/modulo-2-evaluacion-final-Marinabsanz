@@ -10,7 +10,7 @@ const result = document.querySelector(".js-result");
 
 ////¡probando en poner aqui var d resultados con  texto para despues concatenar
 const imagesResult = document.querySelector(".js-series");
-const resultText2 = "Estos son tus resultados al buscar :"
+// const resultText2 = si lo creo no me va;
 //VARIABLES VACIAS
 // let cucumber = [];
 // let favoritos = [];
@@ -19,7 +19,6 @@ function searchShows() {
   const userResult = userText.value;
   fetch(urlShow + userResult)
     .then((response) => response.json())
-
     //CUCUMBER --DATA a TODO el json que veo en postman
     .then((cucumber) => {
       if (cucumber.length === 0) {
@@ -28,7 +27,7 @@ function searchShows() {
         result.innerHTML = "Introduce una letrita más";
       } else {
         
-        result.innerHTML += resultText2;
+        result.innerHTML += "Estos son tus resultados al buscar :";
       }
       //no quiero que me autocomplete
       //necesito refrescar al darle al boton, ADD Y REMOVE
