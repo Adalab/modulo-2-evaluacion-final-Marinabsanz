@@ -7,8 +7,9 @@ const urlShow = "https://api.tvmaze.com/search/shows?q=";
 const userText = document.querySelector(".js-user-search");
 const button = document.querySelector(".js-button");
 const result = document.querySelector(".js-result");
-const imagesResult = document.querySelector(".js-series");
+
 ////¡probando en poner aqui var d resultados con  texto para despues concatenar
+const imagesResult = document.querySelector(".js-series");
 const resultText2 = "Estos son tus resultados al buscar :"
 //VARIABLES VACIAS
 // let cucumber = [];
@@ -42,7 +43,9 @@ function searchShows() {
         } else {
           result.innerHTML += `<img src="${userShow.show.image.medium}"/>`;
 
-          //  `<img src="$ {imagesRslt.medium} "/>`   por q no me funciona asi si le he dado una constante?
+          //  `<img src="$ {imagesRslt.medium} "/>`   
+          //por q no me funciona asi si le he dado 
+          //una constante?
         }
       }
     });
