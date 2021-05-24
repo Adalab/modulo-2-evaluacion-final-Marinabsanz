@@ -27,10 +27,10 @@ function searchShows() {
       if (cucumber.length === 0) {
         result.innerHTML = "no hay resultados en tu búsqueda";
     
-        result.innerHTML = "Introduce una letrita más";
+        // result.innerHTML = "Introduce una letrita más";
       } else {
         
-        result.innerHTML = "Estos son tus resultados al buscar :";
+        result.innerHTML = "Estos son tus resultados:";
       }
       //no quiero que me autocomplete
       //necesito refrescar al darle al boton, ADD Y REMOVE
@@ -38,11 +38,11 @@ function searchShows() {
         let htmlDeUnaSerie = '';
 
         const liShow = document.createElement("li"); //Mal no mezclar hasta entenderlo
-        htmlDeUnaSerie += '<li class="js-show" id="${userShow.show.id}">';
+        htmlDeUnaSerie += '<li class="js-listR" id="${userShow.show.id}">';
         htmlDeUnaSerie += userShow.show.name + ":" +"</br>";
         const imagesRslt = userShow.show.image;
         if (imagesRslt === null) {
-          htmlDeUnaSerie = resultText2+`<img src= "https://placekitten.com/200/300"></img>"`;
+          htmlDeUnaSerie = `<img src= "https://placekitten.com/200/300"></img>"`;
         } else {
           htmlDeUnaSerie += `<img src="${userShow.show.image.medium}"/>`;
           //var 
@@ -55,7 +55,8 @@ function searchShows() {
         result.innerHTML += htmlDeUnaSerie;
       }
 
-      docum.querySelectorAll()
+      docum.querySelectorAll(".js-listR");
+      
     });
 }
 

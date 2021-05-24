@@ -1,33 +1,6 @@
 //FAVORITAS
 
 
-
-let myFav = []
-
-const favoritos = document.querySelectorAll(".js-shows-listFav");
-
-
-
-
-
-// function clickshow (event){ 
-//  const favSelect = event.currentTarget;
-// }
- //obtener info asociada a los show
-// function addShows (evt){
-//     carrito.push(evt.target.getAttribute ('mark'))
-// }
-
-
-
-
-
-
-
-
-
-
-
 //obtener info d la img seleccionada
 //y dsp guardarlo en array d fav
 //click marca- click desmarca el fav
