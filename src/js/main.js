@@ -1,6 +1,6 @@
 "use strict";
 
-const urlShow = "https://api.tvmaze.com/search/shows?q=";
+const urlShow = "//api.tvmaze.com/search/shows?q=";
 
 //otra opcion sería fetch(`http://api.tvmaze.com/search/shows?q=${inputText.value}`)
 //pero abajo he puesto las dos var concatenadas para entender mejor. (más basto)
@@ -13,40 +13,49 @@ const imagesResult = document.querySelector(".js-series");
 // const resultText2 = si lo creo no me va;
 //VARIABLES VACIAS
 // let cucumber = [];
-// let favoritos = [];
+
 
 function searchShows() {
   const userResult = userText.value;
+
+
+  //lo de la letrita mas iria aqui porq en el otro lado ya m esta viendo los resultados
   fetch(urlShow + userResult)
     .then((response) => response.json())
     //CUCUMBER --DATA a TODO el json que veo en postman
     .then((cucumber) => {
       if (cucumber.length === 0) {
-        result.innerHTML += "no hay resultados en tu búsqueda";
-      } else if (cucumber.length <= 2) {
+        result.innerHTML = "no hay resultados en tu búsqueda";
+    
         result.innerHTML = "Introduce una letrita más";
       } else {
         
-        result.innerHTML += "Estos son tus resultados al buscar :";
+        result.innerHTML = "Estos son tus resultados al buscar :";
       }
       //no quiero que me autocomplete
       //necesito refrescar al darle al boton, ADD Y REMOVE
       for (const userShow of cucumber) {
-        const liShow = document.createElement("li");
+        let htmlDeUnaSerie = '';
 
-        result.innerHTML += userShow.show.name + ":" + "</br>";
-
+        const liShow = document.createElement("li"); //Mal no mezclar hasta entenderlo
+        htmlDeUnaSerie += '<li class="js-show" id="${userShow.show.id}">';
+        htmlDeUnaSerie += userShow.show.name + ":" +"</br>";
         const imagesRslt = userShow.show.image;
         if (imagesRslt === null) {
-          result.innerHTML = resultText2+`<img src= "https://placekitten.com/200/300"></img>"`;
+          htmlDeUnaSerie = resultText2+`<img src= "https://placekitten.com/200/300"></img>"`;
         } else {
-          result.innerHTML += `<img src="${userShow.show.image.medium}"/>`;
-
+          htmlDeUnaSerie += `<img src="${userShow.show.image.medium}"/>`;
+          //var 
           //  `<img src="$ {imagesRslt.medium} "/>`   
           //por q no me funciona asi si le he dado 
           //una constante?
         }
+        htmlDeUnaSerie += '</li>';
+
+        result.innerHTML += htmlDeUnaSerie;
       }
+
+      docum.querySelectorAll()
     });
 }
 
