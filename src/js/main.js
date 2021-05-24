@@ -8,10 +8,8 @@ const userText = document.querySelector(".js-user-search");
 const button = document.querySelector(".js-button");
 const result = document.querySelector(".js-result");
 //arra de faviritos vacio
-let listFav= [];
-
-
-
+let totalSeries=  [];
+let listFav = [];
 
 function searchShows() {
   const userResult = userText.value;
@@ -28,33 +26,43 @@ function searchShows() {
 
       for (const userShow of cucumber) {
         let htmlDeUnaSerie = "";
-
-        const liShow = document.createElement("li"); //MalGIT
-        htmlDeUnaSerie += '<li class="js-result" id="${userShow.show.id}">';
+        htmlDeUnaSerie += '<li class="js-result changeColor" id="${userShow.show.id}">';
         htmlDeUnaSerie += userShow.show.name + ":" + "</br>";
         const imagesRslt = userShow.show.image;
         if (imagesRslt === null) {
           htmlDeUnaSerie = `<img src= "https://placekitten.com/200/300"></img>"`;
         } else {
           htmlDeUnaSerie += `<img src="${userShow.show.image.medium}"/>`;
-          //var
-          //  `<img src="$ {imagesRslt.medium} "/>`
-          //por q no me funciona asi si le he dado
-          //una constante?
         }
         htmlDeUnaSerie += "</li>";
-
         result.innerHTML += htmlDeUnaSerie;
-      }
+        takeList (userShow)   //llamo a la funcion q me llena el array
+        console.log (totalSeries);
+      }   
     });
 }
 
+function takeList (userShow) {
+  if (userShow.show.image === true) {
+    totalSeries.push ({name:` ${userShow.show.name}`, imagen: `${userShow.show.image.medium}` })
+
+  } else {
+    totalSeries.push ({name: ` ${userShow.show.name}`, imagen: `https://placekitten.com/200/300` })
+  };
+}
+
+
+function funct (evt) {
+  let selectionTotal = evt.currentTarget;
+}
 button.addEventListener("click", searchShows);
+
+
+
 
 //botom para reset, dar id a nuevo boton que haga de refrescar--
 // const reloadButton = document.getElementById("#reload");
 // function reload() {
 //   location.reload();
-
 // }
 // reloadButton.addEventListener("click", reload, false);
