@@ -7,34 +7,29 @@ const urlShow = "//api.tvmaze.com/search/shows?q=";
 const userText = document.querySelector(".js-user-search");
 const button = document.querySelector(".js-button");
 const result = document.querySelector(".js-result");
+//arra de faviritos vacio
+let listFav= [];
 
-////¡probando en poner aqui var d resultados con  texto para despues concatenar
-const imagesResult = document.querySelector(".js-series");
-// const resultText2 = si lo creo no me va;
-//VARIABLES VACIAS
-// let cucumber = [];
+
+
 
 function searchShows() {
   const userResult = userText.value;
-
-  //lo de la letrita mas iria aqui porq en el otro lado ya m esta viendo los resultados
+  //lo de PON la letrita mas iria aqui ---
   fetch(urlShow + userResult)
     .then((response) => response.json())
     //CUCUMBER --DATA a TODO el json que veo en postman
     .then((cucumber) => {
       if (cucumber.length === 0) {
         result.innerHTML = "no hay resultados en tu búsqueda";
-
-        result.innerHTML = "Introduce una letrita más";
       } else {
         result.innerHTML = "Estos son tus resultados :";
       }
-      //no quiero que me autocomplete
-      //necesito refrescar al darle al boton, ADD Y REMOVE
+
       for (const userShow of cucumber) {
         let htmlDeUnaSerie = "";
 
-        const liShow = document.createElement("li"); //Mal
+        const liShow = document.createElement("li"); //MalGIT
         htmlDeUnaSerie += '<li class="js-result" id="${userShow.show.id}">';
         htmlDeUnaSerie += userShow.show.name + ":" + "</br>";
         const imagesRslt = userShow.show.image;
