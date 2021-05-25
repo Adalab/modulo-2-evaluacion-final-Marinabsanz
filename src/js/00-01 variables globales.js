@@ -7,4 +7,5 @@ const result = document.querySelector(".js-result");
 let totalUlFav = document.querySelector(".js-shows-listFav"); //const d mis fav
 //array de favoritos vacio
 let totalSeries = [];
-let listFav = [];
+let listFav = [];listFav
+let favorites = [];

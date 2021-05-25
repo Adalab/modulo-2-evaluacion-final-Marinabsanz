@@ -13,7 +13,7 @@ localStorage.setItem("totalUlFav", JSON.stringify(totalUlFav));
 //      console.log (totalUlFav);
 // }
 
-// -ARREGLAR LOCAL STORAGE--------------no lo pilla
+// -ARREGLAR LOCAL STORAGE--------------
 
 // function paintLStorage() {
 // const localStorageFav = localStorage.getItem("htmlDeUnaSerie");
@@ -24,11 +24,3 @@ localStorage.setItem("totalUlFav", JSON.stringify(totalUlFav));
 //   paintFavoritesTotal();
 // }
 // paintLStorage();
-
-
-
-
-//DROP DRAG
-//  <div id= "drop-zone" ondrop= "dropHandler(evt) ;">
-//  <p> arrastra y suelta tus pelis aquí</p>
-//  console.log ("drop-zone")//
