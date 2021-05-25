@@ -3,7 +3,7 @@ body {
   height: 100vh;
   // background-image: url('https://images-na.ssl-images-amazon.com/images/I/41a6sJrj7SL.jpg') ;
   font-family: $font-main;
-
+   background-color: $background-color;
   
 }
 
@@ -13,11 +13,12 @@ body {
 // }
 
 .result {
+  width: -50%;
   margin-top: 30px;
-  background-color: $colornormal;
   display: flex;
   flex-direction: column;
-  width: fit-content;
+  align-items: flex-end;
+  justify-content: flex-end;
 
 }
 .shows__list {
@@ -25,9 +26,8 @@ body {
   border-top: solid 1px;
   display: flex;
   flex-direction: column;
-  
+ 
 }
-
 
 .changeColor { 
   background-color: $colorcard-select;
@@ -35,3 +35,19 @@ body {
   font-family: $font-change;
   font-size:  2rem;
 }
+
+
+.image-js-replace {
+  border-top: 10px;
+  width: 210px;
+  height: 300px;
+
+}
+
+
+.UserSearch {
+ border:none;
+ background-color: rgb(226, 225, 214);
+}
+
+

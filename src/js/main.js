@@ -22,9 +22,10 @@ function searchShows() {
     .then((data) => {
       totalSeries = data; //guardo mis datos de la peticion del servidor en mi  array Global
       if (data.length === 0) {
-        result.innerHTML = "no hay resultados en tu búsqueda";
+        result.innerHTML = "No hay resultados en tu búsqueda";
       } else {
-        result.innerHTML = "Estos son tus resultados :";
+        result.innerHTML = "Estos son tus resultados";
+        //'<h1 class= "js-h1" ${`Estos son tus resultados`} :" + </h1>';  no me funciona -que falla?
       }
 
       for (const userShow of data) {
@@ -33,9 +34,9 @@ function searchShows() {
         htmlDeUnaSerie += userShow.show.name + ":" + "</br>";
         const imagesRslt = userShow.show.image;
         if (imagesRslt === null) {
-          htmlDeUnaSerie = `<img src= https://www.panatier.es/web/image/product.template/7363/image?unique=d772d4f"></img>"`;
+          htmlDeUnaSerie = `<img class= "image-js-replace" src= https://www.panatier.es/web/image/product.template/7363/image?unique=d772d4f"></img>"`;
         } else {
-          htmlDeUnaSerie += `<img src="${userShow.show.image.medium}"/>`;
+          htmlDeUnaSerie += `<img class= "image-js-replace" src="${userShow.show.image.medium}"/>`;
         }
         htmlDeUnaSerie += "</li>";
         result.innerHTML += htmlDeUnaSerie;
@@ -54,21 +55,19 @@ function listenNowseries() {
   const allShows = document.querySelectorAll(".js-list");
   for (const serie of allShows) {
     serie.addEventListener("click", favoritesChanges);
+    serie.addEventListener("draggable", favoritesChanges); //arrastrar---añadir funcion
   }
 }
 
 function favoritesChanges(evt) {
   evt.currentTarget; //lo que selecciono
   const currentSelect = evt.currentTarget; //lo guardo en constante
-  currentSelect.classList.toggle("changeColor");  //añado propiedad nueva de css para cambiar color
-
-///seguir 
-
-
+  currentSelect.classList.toggle("changeColor"); //añado propiedad nueva de css para cambiar color
+  //no coge las que tienen imagen replace
+  ///seguir
 }
 
-
- // ---------seguir fUNCION DE IVAN de handlerclickcard para continuar---
+// ---------seguir fUNCION DE IVAN de handlerclickcard para continuar---
 
 ////no sirve,
 // function takeList(userShow) {
@@ -85,9 +84,7 @@ function favoritesChanges(evt) {
 //   }
 // }
 
-
 // }
- 
 
 //boton para reset
 const reloadButton = document.getElementById("#reload");

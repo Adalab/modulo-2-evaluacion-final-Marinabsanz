@@ -1,9 +1,18 @@
 .page__footer {
   // position: fixed;
-  left: 0;
-  width: 100vw;
-  padding: 1rem;
+  
+ 
+  padding-top: 1rem;
+  justify-content: flex-end;
+  margin-left: 5px ;
+ 
+}
+
+
+a {
   text-decoration: none;
   list-style-type: none;
-  
+  justify-content: flex-end;
+  margin-left: 5px;
+ 
 }
