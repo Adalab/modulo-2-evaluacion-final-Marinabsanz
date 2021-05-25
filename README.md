@@ -43,10 +43,10 @@ Este comando abre una ventana de Chrome y muestra tu página web**, al igual que
 
 
 Por último...........
--- Si encuentras errores, formas de mejorar el código , o tienes cualquier consejo , no dudes en contactarme!!:)
+***Si encuentras errores, formas de mejorar el código , o tienes cualquier consejo , no dudes en contactarme!!:)
 Toda mejora y guía para seguir aprendiendo es bienvenida
 
 
 
 Marina Benitez Sánchez
-marinabsanzgmail.com
+marinabsanz@gmail.com
