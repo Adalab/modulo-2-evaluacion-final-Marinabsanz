@@ -63,15 +63,15 @@ function saveLS() {
 console.log(localStorage);
 let favorites = [];
 
-function paintLStorage() {
-  const localStorageFav = localStorage.getItem(favorites);
-  favorites = JSON.parse(localStorageFav);
-  if (favorites === null) {
-    favorites = [];
-  }
-  paintFavoritesTotal();
-}
-paintLStorage();
+// function paintLStorage() {
+//   const localStorageFav = localStorage.getItem(favorites);
+//   favorites = JSON.parse(localStorageFav);
+//   if (favorites === null) {
+//     favorites = [];
+//   }
+//   paintFavorites1();     --m estoy equivocando de función!!!!!
+// }
+// paintLStorage(); 
 
 ///INTENTANDO LO DE ARRASTRAR- DROP DRAG
 //  <div id= "drop-zone" ondrop= "dropHandler(evt) ;">
