@@ -20,7 +20,7 @@ function searchShows() {
     .then((response) => response.json())
 
     .then((data) => {
-      totalSeries = data; //guardo mis datos de la peticion del servidor en mi  array G
+      totalSeries = data; //guardo mis datos de la peticion del servidor en mi  array Global
       if (data.length === 0) {
         result.innerHTML = "no hay resultados en tu búsqueda";
       } else {
@@ -39,16 +39,17 @@ function searchShows() {
         }
         htmlDeUnaSerie += "</li>";
         result.innerHTML += htmlDeUnaSerie;
-        // takeList(userShow); //llamo a la funcion q me llena el array
+        // takeList(userShow); //llamo a la funcion que me llena el array
       }
       listenNowseries();
-      console.log(totalSeries); // AHORA ya esta relleno el array global, con las tarjetas pintadas
+      console.log(totalSeries); // AHORA ya está relleno el array global, con las tarjetas pintadas
     });
 }
 
 button.addEventListener("click", searchShows);
 
-///////////////////////////////////////////////
+//NEXT STEP//
+
 function listenNowseries() {
   const allShows = document.querySelectorAll(".js-list");
   for (const serie of allShows) {
@@ -57,9 +58,9 @@ function listenNowseries() {
 }
 
 function favoritesChanges(evt) {
-  evt.currentTarget; //lo q selecciono
-  const currentSelect = evt.currentTarget; //lo guardo en constante,+facil
-  currentSelect.classList.toggle("changeColor");
+  evt.currentTarget; //lo que selecciono
+  const currentSelect = evt.currentTarget; //lo guardo en constante
+  currentSelect.classList.toggle("changeColor");  //añado propiedad nueva de css para cambiar color
 
 ///seguir 
 
@@ -83,12 +84,9 @@ function favoritesChanges(evt) {
 //     });
 //   }
 // }
-//coger al hacer click
 
-//añadir fondo a serie clickada
 
 // }
-//ivan
  
 
 //boton para reset

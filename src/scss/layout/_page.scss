@@ -14,7 +14,7 @@ body {
 
 .result {
   margin-top: 30px;
-  background-color:whitesmoke;
+  background-color: $colornormal;
   display: flex;
   flex-direction: column;
   width: fit-content;
@@ -29,6 +29,9 @@ body {
 }
 
 
-.changeColor{ 
-  background-color: aqua;
+.changeColor { 
+  background-color: $colorcard-select;
+  border: solid 1px;
+  font-family: $font-change;
+  font-size:  2rem;
 }
