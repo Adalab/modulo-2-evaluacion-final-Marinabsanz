@@ -3,7 +3,7 @@
 function showLS() {
   let favorites = [];
 }
-
+console.log (showLS);
 localStorage.setItem("totalUlFav", JSON.stringify(totalUlFav));
 
 // function getLs () {
