@@ -38,14 +38,11 @@ function searchShows() {
 
 button.addEventListener("click", searchShows);
 
-// function gotofavResult()
-// currenteselect2.innerHTML = 'X'
 
-// function onDragStart(event) {
-//   event
-//     .dataTransfer
-//     .setData('Arrastra tus favoritos hacia acá', event.target.id);
-// }
+
+
+
+
 
 //boton para reset
 const reloadButton = document.getElementById("#reload");
@@ -53,6 +50,10 @@ function reload() {
   location.reload();
 }
 reloadButton.addEventListener("click", reload, false);
+
+
+
+
 
 ////no sirve,
 // function takeList(userShow) {

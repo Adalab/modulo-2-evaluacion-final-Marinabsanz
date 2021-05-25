@@ -62,17 +62,19 @@ function saveLS() {
 
 console.log(localStorage);
 let favorites = [];
-// -verificar si esto está funcionando!!!!me borra h2 - Estoy cogiendo mal las C
+
+// -verificar LOCAL STORAGE. qué coger, fallo
 
 // function paintLStorage() {
-//   const localStorageFav = localStorage.getItem(totalUlFav);
-//   totalSeries = JSON.parse(localStorageFav);
-//   if (totalUlFav === null) {
-//     favorites = [];
-//   }
+// const localStorageFav = localStorage.getItem("htmlDeUnaSerie");
+// totalUlFav = JSON.parse(localStorageFav);
+// if (totalUlFav === null) {
+//   favorites = [];
+// }
 //   paintFavoritesTotal();
 // }
 // paintLStorage();
+
 
 //DROP DRAG
 //  <div id= "drop-zone" ondrop= "dropHandler(evt) ;">
