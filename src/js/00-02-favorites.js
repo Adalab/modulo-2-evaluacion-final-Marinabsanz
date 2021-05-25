@@ -62,18 +62,19 @@ function saveLS() {
 
 console.log(localStorage);
 let favorites = [];
+// -verificar si esto está funcionando!!!!me borra h2 - Estoy cogiendo mal las C
 
 // function paintLStorage() {
-//   const localStorageFav = localStorage.getItem(favorites);
-//   favorites = JSON.parse(localStorageFav);
-//   if (favorites === null) {
+//   const localStorageFav = localStorage.getItem(totalUlFav);
+//   totalSeries = JSON.parse(localStorageFav);
+//   if (totalUlFav === null) {
 //     favorites = [];
 //   }
-//   paintFavorites1();     --m estoy equivocando de función!!!!!
+//   paintFavoritesTotal();
 // }
-// paintLStorage(); 
+// paintLStorage();
 
-///INTENTANDO LO DE ARRASTRAR- DROP DRAG
+//DROP DRAG
 //  <div id= "drop-zone" ondrop= "dropHandler(evt) ;">
 //  <p> arrastra y suelta tus pelis aquí</p>
 //  console.log ("drop-zone")//
