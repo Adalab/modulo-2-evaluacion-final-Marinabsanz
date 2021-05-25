@@ -23,41 +23,32 @@
         <img  class= "logo" src="https://chtraduccionesblog.files.wordpress.com/2016/05/computer-cat.jpg?w=840" alt="">
     </header>
     <main class="page__main">
-      <div class= "show-container"> 
-      <h2>Buscador de series</h2>
-      <form method="GET">
-        <input type="text" class="UserSearch js-user-search" placeholder="Escribe tu serie y click" autocomplete="off">
-        <input type="button" class="button js-button" value="SEARCH">
-      </form>
+      <div class="show-container">
+        <h2>Buscador de series</h2>
+        <form method="GET">
+          <input type="text" class="UserSearch js-user-search" placeholder="Escribe y dale a Search" autocomplete="off">
+          <input type="button" class="button js-button" value="SEARCH">
+        </form>
+
+        <input type="button" class="buttonFav js-refresh" value="BORRAR BÚSQUEDA" id="#reload">
+        <section class="shows__list  js-shows-list"></section>
+        <ul class="shows-listfav dropzone  js-shows-listFav"> Mis favoritos
+        </ul>
+        </section>
+        <ul class="result  js-result"></ul>
 
 
-      <div class= "show-container2"> 
-      <ul class="result  js-result"></ul>
-    </div>
-      <section class="shows__list  js-shows-list"></section>
-      <!--   esto tiene q aparecer y desaparecer  -->
-      <div class= "show-container3"> 
-      <ul class="shows-listfav  js-shows-listFav"> Favoritos
-
-      </ul>
-
-      <input type="button" class="buttonFav js-refresh" value="BORRAR FAVORITOS" id="#reload">
-
-      </section>
-    </div>
-
-    </div>
+      </div>
     </main>
-       <footer class="page__footer">
+    <footer class="page__footer">
 
       <a class="" href="https://www.linkedin.com/in/marina-ben%C3%ADtez-s%C3%A1nchez-0214a059/">Más info sobre mi</a>
 
       <small>
-        &copy; 
+        &copy;
         </include>
       </small>
-    </footer> 
-
+    </footer>
   </div>
   <script src="./assets/js/main.js"></script>
 </body>

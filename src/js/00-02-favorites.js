@@ -15,25 +15,24 @@ function favoritesChanges(evt) {
   evt.currentTarget; //lo que selecciono
   const currentSelect = evt.currentTarget; //lo guardo en constante
   currentSelect.classList.toggle("changeColor"); //añado propiedad nueva de css para cambiar color
-  console.log(currentSelect);
+  // console.log(currentSelect);
 
   currentSelect2 = parseInt(currentSelect.id);
-  console.log(currentSelect2);
-  const serieFound = listFav.find(
-    (serie) => serie.show.id === currentSelect2
-  );
-  console.log(serieFound);
- ///necesito volver a recorrer la
- // vag global y sacarle algo apra mostrar cuando no este definido
-  
-  if (serieFound ===  undefined) {
+  // console.log(currentSelect2);
+  const serieFound = listFav.find((serie) => serie.show.id === currentSelect2);
+  // console.log(serieFound);
+
+  ///necesito volver a recorrer la
+  // vag global y sacarle algo para mostrar cuando no este definido:
+
+  if (serieFound === undefined) {
     const serieNoTFound = totalSeries.find(
       (serie) => serie.show.id === currentSelect2
     );
     listFav.push(serieNoTFound);
   }
-  paintFavoritesTotal()
-  }
+  paintFavoritesTotal();
+}
 
 ///PINTAR FAVORITOS
 
@@ -50,34 +49,31 @@ function paintFavoritesTotal() {
       htmlDeUnaSerie += `<img class= "image-js-replace" src="${serie.show.image.medium}"/>`;
     }
     htmlDeUnaSerie += "</li>";
-//le podria haber dadoa  las 2 el mismo nombre de usershow o serie al empezar y acabar las constantes en la funcion for//
-
-
-    // takeList(userShow); //llamo a la funcion que me llena el array
+    //le podria haber dado a las 2 el mismo nombre de "usershow" o "serie"
   }
   totalUlFav.innerHTML = htmlDeUnaSerie;
 }
 
-
-
 /////LOCAL STORAGE
-// ---set item de mi listfav y luego el get 
-
-function paintLStorage (){
-  const localStorageFav =localStorage.getItem (favorites);
-  favorites = JSON.parse (localStorageFav);
-  if (favorites === null) {
-    favorites = [];
-  } gotofavResult ();
+// Save
+function saveLS() {
+  localStorage.setItem("favorites", JSON.stringify(listFav));
 }
 
+console.log(localStorage);
+let favorites = [];
 
+function paintLStorage() {
+  const localStorageFav = localStorage.getItem(favorites);
+  favorites = JSON.parse(localStorageFav);
+  if (favorites === null) {
+    favorites = [];
+  }
+  paintFavoritesTotal();
+}
+paintLStorage();
 
 ///INTENTANDO LO DE ARRASTRAR- DROP DRAG
 //  <div id= "drop-zone" ondrop= "dropHandler(evt) ;">
 //  <p> arrastra y suelta tus pelis aquí</p>
-//  console.log ("drop-zone")
-//  </div>
-
-
-
+//  console.log ("drop-zone")//

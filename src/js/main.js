@@ -1,9 +1,9 @@
 "use strict";
 function searchShows() {
   const userResult = userText.value;
-  // PON  1 letrita mas ......
-  // if (userResult.length <= 2) {
-  //  result.innerHTML = "escribe una letrita más!"
+
+  //  if (userText.length <= 2) {
+  // result.innerHTML = "escribe una letrita más!"
   // }
   fetch(urlShow + userResult)
     .then((response) => response.json())
@@ -13,7 +13,7 @@ function searchShows() {
       if (data.length === 0) {
         result.innerHTML = "No hay resultados en tu búsqueda";
       } else {
-        result.innerHTML = "Estos son tus resultados";
+        result.innerHTML = "Pincha para guardar en favoritos" + "</br>";
         //'<h1 class= "js-h1" ${`Estos son tus resultados`} :" + </h1>';  no me funciona -que falla?
       }
 
@@ -31,17 +31,13 @@ function searchShows() {
         result.innerHTML += htmlDeUnaSerie;
         // takeList(userShow); //llamo a la funcion que me llena el array
       }
-      listenNowseries();
+      listenNowseries(); //llamo a la funcion que me llena el array
       console.log(totalSeries); // AHORA ya está relleno el array global, con las tarjetas pintadas
     });
 }
 
 button.addEventListener("click", searchShows);
 
-
-
-
-// necesito q la funct gotofavResult me pesque  los favoritos selecccionados para dsp guardarlos
 // function gotofavResult()
 // currenteselect2.innerHTML = 'X'
 
