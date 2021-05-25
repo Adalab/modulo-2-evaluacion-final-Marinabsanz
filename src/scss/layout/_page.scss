@@ -1,12 +1,11 @@
 body {
   padding: 2rem;
   height: 100vh;
-  // background-image: url('https://images-na.ssl-images-amazon.com/images/I/41a6sJrj7SL.jpg') ;
   font-family: $font-main;
    background-color: $background-color;
+  //  opacity: 50%; --ideas
   
 }
-
 
 // .shows-listfav{
 //   visibility: hidden;
@@ -34,6 +33,9 @@ body {
   border: solid 1px;
   font-family: $font-change;
   font-size:  2rem;
+  width: 50%;
+  color:black;
+ 
 }
 
 
@@ -51,3 +53,18 @@ body {
 }
 
 
+
+
+.page__header{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  
+}
+
+.logo {
+  width: 150px;
+  height: 150px;
+  opacity: 80%;
+  border-radius: 50px;
+}
