@@ -54,29 +54,4 @@ function paintFavoritesTotal() {
   totalUlFav.innerHTML = htmlDeUnaSerie;
 }
 
-/////LOCAL STORAGE
-// Save
-function saveLS() {
-  localStorage.setItem("favorites", JSON.stringify(listFav));
-}
 
-console.log(localStorage);
-let favorites = [];
-
-// -verificar LOCAL STORAGE. qué coger, fallo
-
-// function paintLStorage() {
-// const localStorageFav = localStorage.getItem("htmlDeUnaSerie");
-// totalUlFav = JSON.parse(localStorageFav);
-// if (totalUlFav === null) {
-//   favorites = [];
-// }
-//   paintFavoritesTotal();
-// }
-// paintLStorage();
-
-
-//DROP DRAG
-//  <div id= "drop-zone" ondrop= "dropHandler(evt) ;">
-//  <p> arrastra y suelta tus pelis aquí</p>
-//  console.log ("drop-zone")//

@@ -1,13 +1,8 @@
 "use strict";
 function searchShows() {
   const userResult = userText.value;
-
-  //  if (userText.length <= 2) {
-  // result.innerHTML = "escribe una letrita más!"
-  // }
   fetch(urlShow + userResult)
     .then((response) => response.json())
-
     .then((data) => {
       totalSeries = data; //guardo mis datos de la peticion del servidor en mi  array Global
       if (data.length === 0) {
@@ -37,21 +32,6 @@ function searchShows() {
 }
 
 button.addEventListener("click", searchShows);
-
-
-
-
-
-
-
-//boton para reset
-const reloadButton = document.getElementById("#reload");
-function reload() {
-  location.reload();
-}
-reloadButton.addEventListener("click", reload, false);
-
-
 
 
 
