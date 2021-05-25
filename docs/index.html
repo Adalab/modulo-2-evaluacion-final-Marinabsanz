@@ -6,6 +6,11 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>search your shows</title>
   <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet" />
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@600&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Fredericka+the+Great&family=Open+Sans:wght@600&display=swap"
+    rel="stylesheet">
   <link rel="stylesheet" href="./assets/css/main.css" />
   <link rel="icon" href="./assets/images/computer-cat.jpg" />
 </head>
@@ -20,16 +25,20 @@
     </header>
 
     <main class="page__main">
+      <div class= "show-container"> 
       <h2>Buscador de series</h2>
       <form method="GET">
         <input type="text" class="UserSearch js-user-search" placeholder="Escribe tu serie y click" autocomplete="off">
         <input type="button" class="button js-button" value="SEARCH">
       </form>
-      <ul class="result  js-result"></ul>
 
+
+      <div class= "show-container2"> 
+      <ul class="result  js-result"></ul>
+    </div>
       <section class="shows__list  js-shows-list"></section>
       <!--   esto tiene q aparecer y desaparecer  -->
-     
+      <div class= "show-container3"> 
       <ul class="shows-listfav  js-shows-listFav"> Favoritos
 
       </ul>
@@ -37,9 +46,11 @@
       <input type="button" class="buttonFav js-refresh" value="BORRAR FAVORITOS" id="#reload">
 
       </section>
+    </div>
 
+    </div>
     </main>
-    <!-- <footer class="page__footer">
+       <footer class="page__footer">
 
       <a class="" href="https://www.linkedin.com/in/marina-ben%C3%ADtez-s%C3%A1nchez-0214a059/">Más info sobre mi</a>
 
@@ -47,7 +58,7 @@
         &copy; 
         </include>
       </small>
-    </footer>  -->
+    </footer> 
 
   </div>
   <script src="./assets/js/main.js"></script>
