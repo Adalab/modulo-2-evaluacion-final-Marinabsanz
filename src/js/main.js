@@ -1,15 +1,4 @@
 "use strict";
-
-const urlShow = "//api.tvmaze.com/search/shows?q=";
-//otra opcion sería fetch(`api.tvmaze.com/search/shows?q=${inputText.value}`)
-
-const userText = document.querySelector(".js-user-search");
-const button = document.querySelector(".js-button");
-const result = document.querySelector(".js-result");
-//array de favoritos vacio
-let totalSeries = [];
-let listFav = [];
-
 function searchShows() {
   const userResult = userText.value;
   // PON  1 letrita mas ......
@@ -30,7 +19,7 @@ function searchShows() {
 
       for (const userShow of data) {
         let htmlDeUnaSerie = "";
-        htmlDeUnaSerie += '<li class="js-list" id="${userShow.show.id}">';
+        htmlDeUnaSerie += '<li class="js-list" id=#id ="${userShow.show.id}">';
         htmlDeUnaSerie += userShow.show.name + ":" + "</br>";
         const imagesRslt = userShow.show.image;
         if (imagesRslt === null) {
@@ -65,9 +54,44 @@ function favoritesChanges(evt) {
   currentSelect.classList.toggle("changeColor"); //añado propiedad nueva de css para cambiar color
   //no coge las que tienen imagen replace
   ///seguir
+  const currenteselect2= parseInt(currentSelect.dataset['id']);
+
+  console.log("currenteselect2");
+  // currentSelect.addEventListener ("dragstart", favoritesChanges);
+
+  //no lo cog no sta definido, pero si    
+  // currentSelect.push (id);
 }
 
-// ---------seguir fUNCION DE IVAN de handlerclickcard para continuar---
+// ---------seguir  pasos de handlerclickcard ivan para continuar---
+
+
+// /////LOCAL STORAGE 
+// function paintLStorage (){
+//   const localStorageFav =localStorage.getItem (favorites);
+//   favorites = JSON.parse (localStorageFav);
+//   if (favorites === null) {
+//     favorites = [];
+//   } gotofavResult ();
+// }
+// necesito q la funct gotofavResult me pesque  los favoritos selecccionados para dsp guardarlos
+// function gotofavResult()
+// currenteselect2.innerHTML = 'X'
+
+
+
+
+
+//boton para reset
+const reloadButton = document.getElementById("#reload");
+function reload() {
+  location.reload();
+}
+reloadButton.addEventListener("click", reload, false);
+
+
+
+
 
 ////no sirve,
 // function takeList(userShow) {
@@ -85,10 +109,3 @@ function favoritesChanges(evt) {
 // }
 
 // }
-
-//boton para reset
-const reloadButton = document.getElementById("#reload");
-function reload() {
-  location.reload();
-}
-reloadButton.addEventListener("click", reload, false);
