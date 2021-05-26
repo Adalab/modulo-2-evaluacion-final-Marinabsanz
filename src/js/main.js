@@ -1,4 +1,11 @@
+
 "use strict";
+
+
+const go= document.querySelector (".js-Go");
+
+
+
 function searchShows() {
   const userResult = userText.value;
   fetch(urlShow + userResult)
@@ -16,6 +23,8 @@ function searchShows() {
         let htmlDeUnaSerie = "";
         htmlDeUnaSerie += `<li class="js-list" id="${userShow.show.id}">`;
         htmlDeUnaSerie += userShow.show.name + ":" + "</br>";
+        htmlDeUnaSerie += userShow.show.schedule.time;
+
         const imagesRslt = userShow.show.image;
         if (imagesRslt === null) {
           htmlDeUnaSerie = `<img class= "image-js-replace" src= https://www.panatier.es/web/image/product.template/7363/image?unique=d772d4f"></img>"`;
@@ -24,6 +33,9 @@ function searchShows() {
         }
         htmlDeUnaSerie += "</li>";
         result.innerHTML += htmlDeUnaSerie;
+
+        go.innerHTML= userShow.show.schedule.time;
+
         // takeList(userShow); //llamo a la funcion que me llena el array
       }
       listenNowseries(); //llamo a la funcion que me llena el array
@@ -31,7 +43,36 @@ function searchShows() {
     });
 }
 
+
+
+function gotoGo () {
+
+ // console.log ("gotoGo");
+ for( const gogo of totalSeries) {
+   let gosearch = gogo.show.name;
+  gosearch = gogo.show.name;
+  console.log (gosearch);
+
+           
+ }
+
+}
+
+
+go.addEventListener ('click', gotoGo);
+
 button.addEventListener("click", searchShows);
+
+
+
+
+
+
+
+
+
+
+
 
 
 
