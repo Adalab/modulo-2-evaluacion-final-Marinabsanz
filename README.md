@@ -13,8 +13,7 @@ A su vez, el usuario podrá seleccionar sus series y guardarlas en sus favoritos
 
 
 ## Resultado
----Si quieres ver el resultado final, puedes acceder a este enlace :  http://beta.adalab.es/modulo-2-evaluacion-final-Marinabsanz/
-
+---Si quieres ver el resultado final, puedes acceder a este enlace :  https://github.com/Marinabsanz/Searchyourseries-JAVASCRIPT-Marinabsanz.git
 
 > **NOTA:** Necesitas tener instalado [Node JS](https://nodejs.org/) para trabajar con este Starter Kit:
 
