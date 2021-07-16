@@ -1,5 +1,5 @@
-# modulo-2-evaluacion-final-Marinabsanz
-MODULO 2    -JAVASCRIPT- 
+# https://github.com/Marinabsanz/Searchyourseries-JAVASCRIPT-Marinabsanz.git
+-JAVASCRIPT- 
 
 En este repositorio encontrarás los ficheros generados para realizar el ejercicio técnico final del módulo 2, Promo M, bootcamp cursado en Adalab
 EL ejercicio consiste en la creación de una aplicación de búsqueda de series
