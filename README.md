@@ -1,4 +1,4 @@
-# https://github.com/Marinabsanz/Searchyourseries-JAVASCRIPT-Marinabsanz.git
+https://marinabsanz.github.io/Searchyourseries-JAVASCRIPT-Marinabsanz/
 -JAVASCRIPT- 
 
 En este repositorio encontrarás los ficheros generados para realizar el ejercicio técnico final del módulo 2, Promo M, bootcamp cursado en Adalab
